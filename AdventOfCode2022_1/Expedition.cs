@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode2022_1
 {
-    public class Expedition
+    public sealed class Expedition
     {
         public Expedition()
         {
@@ -11,11 +11,13 @@
 
         public void AddElf(Elf elf)
         {
+            Guard.Against.Null(elf, nameof(elf));
             Elves.Add(elf);
         }
 
         public void AddElf(params int[] snacks)
         {
+            Guard.Against.Null(snacks, nameof(snacks));
             Elves.Add(new Elf(snacks));
         }
 
