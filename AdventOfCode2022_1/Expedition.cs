@@ -49,7 +49,9 @@
                     snacks.Clear();
                     continue;
                 }
-                snacks.Add(int.Parse(line));
+                int snack = 0;
+                int.TryParse(line, out snack);
+                snacks.Add(snack);
             }
             this.AddElf(snacks.ToArray());
         }
