@@ -21,6 +21,13 @@
             Elves.Add(new Elf(snacks));
         }
 
+        public int ExpeditionGetCaloriesFromTopXElves(int numberOfElves)
+        {
+            Elves.Sort((x, y) => y.TotalCalories.CompareTo(x.TotalCalories));
+            var elves = Elves.Take(numberOfElves);
+            return elves.Sum(x => x.TotalCalories);
+        }
+
         public Elf GetElfWithMostCalories()
         {
             Elves.Sort((x, y) => y.TotalCalories.CompareTo(x.TotalCalories));

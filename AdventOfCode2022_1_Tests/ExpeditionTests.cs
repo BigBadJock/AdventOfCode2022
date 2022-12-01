@@ -55,6 +55,20 @@
         }
 
         [TestMethod]
+        public void ExpeditionGetCaloriesFromTopXElves()
+        {
+            expedition.AddElf(new Elf(1000, 2000, 3000));
+            expedition.AddElf(new Elf(4000));
+            expedition.AddElf(new Elf(5000, 6000));
+            expedition.AddElf(new Elf(7000, 8000, 9000));
+            expedition.AddElf(new Elf(10000));
+
+            int calories = expedition.ExpeditionGetCaloriesFromTopXElves(3);
+
+            Assert.AreEqual(45000, calories);
+        }
+
+        [TestMethod]
         public void ExpeditionCanLoadFromFile()
         {
             expedition.LoadFromFile("testfile.txt");
