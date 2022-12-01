@@ -63,7 +63,7 @@
             expedition.AddElf(new Elf(7000, 8000, 9000));
             expedition.AddElf(new Elf(10000));
 
-            int calories = expedition.ExpeditionGetCaloriesFromTopXElves(3);
+            int calories = expedition.GetCaloriesFromTopXElves(3);
 
             Assert.AreEqual(45000, calories);
         }
