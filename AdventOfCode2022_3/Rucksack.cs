@@ -2,8 +2,9 @@
 {
     public class Rucksack
     {
-        public string Compartment1 { get; set; }
-        public string Compartment2 { get; set; }
+        public string Compartment1 { get; private set; }
+        public string Compartment2 { get; private set; }
+        public string Contents { get; private set; }
 
         public Rucksack(string packingList)
         {
@@ -14,6 +15,7 @@
                 throw new ArgumentException("packingList must be an even number of characters", nameof(packingList));
             }
             int h = l / 2;
+            Contents = packingList;
             Compartment1 = packingList.Substring(0, h);
             Compartment2 = packingList.Substring(h);
         }

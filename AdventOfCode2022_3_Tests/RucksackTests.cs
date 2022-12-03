@@ -46,5 +46,15 @@ namespace AdventOfCode2022_3_Tests
             Assert.AreEqual(29, priority);
         }
 
+        [TestMethod]
+        public void RucksackContents()
+        {
+            string packingList = "vJrwpWtwJgWrhcsFMMfFFhFp";
+            Rucksack rucksack = new Rucksack(packingList);
+            Assert.AreEqual(packingList, rucksack.Contents);
+            Assert.AreEqual("vJrwpWtwJgWr", rucksack.Compartment1);
+            Assert.AreEqual("hcsFMMfFFhFp", rucksack.Compartment2);
+        }
+
     }
 }
