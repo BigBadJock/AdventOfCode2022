@@ -1,6 +1,4 @@
-﻿using Ardalis.GuardClauses;
-
-namespace AdventOfCode2022_2
+﻿namespace AdventOfCode2022_2
 {
     public class Strategy
     {
